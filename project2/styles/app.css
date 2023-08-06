@@ -1,0 +1,58 @@
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css";
+@font-face 
+{
+    font-family: "Cloudstorm-lJX0.";
+    src: url(../fonts/Cloudstorm-lJX0.woff);
+}
+@font-face 
+{
+    font-family: "Overpass-regular";
+    src: url(../fonts/Overpass-Regular.woff);
+}
+h1{
+    font-family: "Cloudstorm-lJX0.";
+}
+html{
+    font-family: "Overpass-regular";
+}
+button{
+    padding: 6px 20px;
+    font-family: "Overpass-regular";
+    border-radius: 8px;
+}
+.card-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+ww-card{
+    margin: 0 .5rem .5rem 0;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+#map {
+
+    width: 400px; 
+    height: 300px;
+  }
+.marker {
+    background-image: url('../images/mapmarker.png');
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    }
+
+.mapboxgl-popup {
+    max-width: 200px;
+    }
+
+.mapboxgl-popup-content {
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    }

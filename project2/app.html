@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.js'></script>
+    <script src="src/app.js" type="module"></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.3.1/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="styles/app.css">
+    <link rel="Cloudstorm-lJX0." href="fonts/Cloudstorm-lJX0.woff">
+    <link rel="Overpass-Regular" href="fonts/Overpass-Regular.woff">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+
+
+    <title>Weather Watch</title>
+</head>
+<body>
+    <nav class="navbar is-primary">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="about.html">
+                <img src="images/weather.png" alt="cloud" style="max-height: 70px;" class="py-2 px-2">
+            Weather Watch</a>
+            <a class="navbar-burger mt-4" id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+        </div>
+
+    <div class="navbar-menu" id=nav-links>
+        <div class="navbar-end">
+            <a class="navbar-item" href="about.html">About</a>
+            <a class="navbar-item" href="app.html">App</a>
+            <a class="navbar-item" href="favorites.html">Favorites</a>
+            <a class="navbar-item" href="sources.html">Documentation</a>
+        </div>
+    </div>
+    </nav>
+
+    <div class="section pt-2 pb-2">
+        <nav class="breadcrumb has-arrow-separator">
+            <ul class="is-size-7">
+                <li><a class="has-text-primary-dark" href="about.html">About</a></li>
+                <li class="is-active"><a>App</a></li>
+            </ul>
+        </nav>
+    </div>
+    <header>
+        <h1 class="is-size-3 has-text-centered has-text-primary has-background-primary-light py-2">Weather Watch</h1>
+        <p class="is-italic has-text-centered">Find out the current weather of any city!</p>
+    </header>
+
+    <div class = "columns">
+        <div class = "column is-one-third">
+        <section class="section container">
+                <div class="searchoptions" id="cities">
+                <p class="is-size-5 is-subtitle py-2">Select a US City From List:</p>
+                    <select class="mt-2" id="city">
+                        <option value="Abilene">Abilene, TX</option>
+                        <option value="Albany">Albany, NY</option>
+                        <option value="Albuquerque">Albuquerque, NM</option>
+                        <option value="Annapolis">Annapolis, MD</option>
+                        <option value="Atkinson">Atkinson, NH</option>
+                        <option value="Atlanta">Atlanta, GA</option>
+                        <option value="Augusta">Augusta, ME</option>
+                        <option value="Austin">Austin, TX</option>
+                        <option value="Baton Rouge">Baton Rouge, LA</option>
+                        <option value="Bear Creek">Bear Creek, AK</option>
+                        <option value="Bethel">Bethel, AK</option>
+                        <option value="Big Lake">Big Lake, AK</option>
+                        <option value="Bismarck">Bismarck, ND</option>
+                        <option value="Boise">Boise, ID</option>
+                        <option value="Boston">Boston, MA</option>
+                        <option value="Buffalo">Buffalo, NY</option>
+                        <option value="Carson City">Carson City, NV</option>
+                        <option value="Charleston">Charleston, WV</option>
+                        <option value="Cheyenne">Cheyenne, WY</option>
+                        <option value="Chicago">Chicago, IL</option>
+                        <option value="Columbia">Columbia, SC</option>
+                        <option value="Columbus">Columbus, OH</option>
+                        <option value="Concord">Concord, NH</option>
+                        <option value="Dallas">Dallas, TX</option>
+                        <option value="Denver">Denver, CO</option>
+                        <option value="Des Moines">Des Moines, IA</option>
+                        <option value="Dover">Dover, DE</option>
+                        <option value="Frankfort">Frankfort, KY</option>
+                        <option value="Harrisburg">Harrisburg, PA</option>
+                        <option value="Hartford">Hartford, CT</option>
+                        <option value="Helena">Helena, MT</option>
+                        <option value="Honolulu">Honolulu, HI</option>
+                        <option value="Houston">Houston, TX</option>
+                        <option value="Indianapolis">Indianapolis, IN</option>
+                        <option value="Jackson">Jackson, MS</option>
+                        <option value="Jefferson City">Jefferson CIty, MO</option>
+                        <option value="Juneau">Juneau, AK</option>
+                        <option value="Lansing">Lansing, MI</option>
+                        <option value="Lincoln">Lincoln, NE</option>
+                        <option value="Little Rock">Little Rock, AR</option>
+                        <option value="Los Angeles">Los Angeles, CA</option>
+                        <option value="Madison">Madison, WI</option>
+                        <option value="Montgomery">Montgomery, AL</option>
+                        <option value="Montpelier">Montpelier, VT</option>
+                        <option value="Nashville">Nashville, TN</option>
+                        <option value="New York City">New York City, NY</option>
+                        <option value="Oklahoma City">Oklahoma City, OK</option>
+                        <option value="Olympia">Olympia, WA</option>
+                        <option value="Phoenix">Phoenix, AZ</option>
+                        <option value="Philadelphia">Philadelphia, PA</option>
+                        <option value="Pierre">Pierre, SD</option>
+                        <option value="Providence">Providence, RI</option>
+                        <option value="Raleigh">Raleigh, NC</option>
+                        <option value="Richmond">Richmond, VA</option>
+                        <option value="Rochester">Rochester, NY</option>
+                        <option value="Sacramento">Sacramento, CA</option>
+                        <option value="Salem">Salem, OR</option>
+                        <option value="Salt Lake City">Salt Lake City, UT</option>
+                        <option value="San Antonio">San Antonio, TX</option>
+                        <option value="San Diego">San Diego, CA</option>
+                        <option value="San Jose">San Jose, CA</option>
+                        <option value="Santa Fe">Santa Fe, NM</option>
+                        <option value="Springfield">Springfield, IL</option>
+                        <option value="St. Paul">St. Paul, MN</option>
+                        <option value="Tallahassee">Tallahassee, FL</option>
+                        <option value="Topeka">Topeka, KS</option>
+                        <option value="Trenton">Trenton, NJ</option>
+                        <option value="West Greenwich">West Greenwich, RI</option>
+                    </select>
+                <button id="search-city" class="button is-warning">Search</button>
+                <button id="favorite-city" class="button is-warning">Favorite</button>
+                </div>
+
+            <div class="searchoptions" id="zipcodes">
+                <p class="is-size-5 is-subtitle py-2">Search a US City by Zip Code:</p>
+                <input class="mt-2" id="zip" type="text" placeholder="Search..">
+                <button id="search-zip" class="button is-warning">Search</button>
+                <button id="favorite-zip" class="button is-warning">Favorite</button>
+            </div>
+
+            <div class="searchoptions" id="int-cities">
+                <p class="is-size-5 is-subtitle py-2">Select an International City From List:</p>
+                    <select class="mt-2" id="int-city">
+                        <option value="Amsterdam">Amsterdam, Netherlands</option>
+                        <option value="Bangkok">Bangkok, Thailand</option>
+                        <option value="Barcelona">Barcelona, Spain</option>
+                        <option value="Delhi">Delhi, India</option>
+                        <option value="Edinburgh">Edinburgh, Scotland</option>
+                        <option value="Florence">Florence, Italy</option>
+                        <option value="Hong Kong">Hong Kong, China</option>
+                        <option value="Istanbul">Istanbul, Turkey</option>
+                        <option value="London">London, England</option>
+                        <option value="Macau">Macau, China</option>
+                        <option value="Mecca">Mecca, Saudi Arabia</option>
+                        <option value="Mexico City">Mexico City, Mexico</option>
+                        <option value="Moscow">Moscow, Russia</option>
+                        <option value="Mumbai">Mumbai, India</option>
+                        <option value="Osaka">Osaka, Japan</option>
+                        <option value="Paris">Paris, France</option>
+                        <option value="Perth">Perth, Australia</option>
+                        <option value="Prague">Prague, Czech Republic</option>
+                        <option value="Reykjavik">Reykjavik, Iceland</option>
+                        <option value="Rome">Rome, Italy</option>
+                        <option value="Seoul">Seoul, South Korea</option>
+                        <option value="Shanghai">Shanghai, China</option>
+                        <option value="Sydney">Sydney, Australia</option>
+                        <option value="Taipei">Taipei, Taiwan</option>
+                        <option value="Tokyo">Tokyo, Japan</option>
+                        <option value="Venice">Venice, Italy</option>
+                    </select>
+
+                <button id="search-int-city" class="button is-warning">Search</button>
+                <button id="favorite-int-city" class="button is-warning">Favorite</button>
+                <p id="favorited"></p>
+            </div>
+        </section>
+    </div>
+
+                <div class="column is-one-third">
+                        <div class="has-text-centered mt-6 is-size-5" id="output">Click buttons to search for weather!</div>
+
+        <div class ="my-4 mx-3" id='map'></div>
+                </div>
+
+                <div class="column is-one-third">
+                <div>
+                    <h2 class="is-size-5 is-subtitle has-text-centered py-2 mt-6 mx-3">Random Weather Fact:</h2>
+                    <p class = "py-2 mx-3 has-text-centered" id="fact"></p>
+                </div>
+            </div>
+        </div>
+
+
+
+
+</body>
+
+    <ww-footer ></ww-footer>
+</html>

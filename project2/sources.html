@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/app.css">
+    <script src="src/sources.js" type="module"></script>
+    <link rel="Cloudstorm-lJX0." href="fonts/Cloudstorm-lJX0.woff">
+    <link rel="Overpass-Regular" href="fonts/Overpass-Regular.woff">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <title>Documentation</title>
+</head>
+<body>
+    <nav class="navbar is-primary">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="about.html">
+                <img src="images/weather.png" alt="cloud" style="max-height: 70px;" class="py-2 px-2">
+                Weather Watch</a>
+            <a class="navbar-burger mt-4" id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+        </div>
+    
+        <div class="navbar-menu" id=nav-links>
+            <div class="navbar-end">
+                <a class="navbar-item" href="about.html">About</a>
+                <a class="navbar-item" href="app.html">App</a>
+                <a class="navbar-item" href="favorites.html">Favorites</a>
+                <a class="navbar-item" href="sources.html">Documentation</a>
+            </div>
+    
+        </div>
+    </nav>
+    
+    <div class="section pt-2 pb-2">
+        <nav class="breadcrumb has-arrow-separator">
+            <ul class="is-size-7">
+                <li><a class="has-text-primary-dark" href="about.html">About</a></li>
+                <li class="is-active"><a>Documentation</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="section container">
+        <h1 class="is-size-3 has-text-primary py-2">Documentation</h1>
+        <h3 class="is-size-5 pb-5 is-italic ">Information about the project</h3>
+
+        <h2 class="is-size-4 py-4">Project Requirements</h2>
+        <a href="https://github.com/tonethar/IGME-330-Fall-2021/blob/main/projects/project-2.md">https://github.com/tonethar/IGME-330-Fall-2021/blob/main/projects/project-2.md</a>
+        
+        <h2 class="is-size-4 py-4">Resources Utilized</h2>
+        <ul>
+            <li>Image carousel- <a href="https://wikiki.github.io/components/carousel/">https://wikiki.github.io/components/carousel/</a></li>
+            <li>Bulma framework- <a href="https://bulma.io/documentation/">https://bulma.io/documentation/</a></li>
+            <li>Bulma tutorial series- <a href="https://www.youtube.com/playlist?list=PL4cUxeGkcC9iXItWKbaQxcyDT1u6E7a8a">https://www.youtube.com/playlist?list=PL4cUxeGkcC9iXItWKbaQxcyDT1u6E7a8a</a></li>
+            <li>All images found on- <a href="https://unsplash.com/">https://unsplash.com/</a></li>
+            <li>Cloudstorm Font- <a href="https://www.fontspace.com/cloudstorm-font-f23665">https://www.fontspace.com/cloudstorm-font-f23665</a></li>
+            <li>IGME235 Project 2- <a href="https://people.rit.edu/aem3780/235/project2/">https://people.rit.edu/aem3780/235/project2/</a></li>
+            <li>Map Box Documentation- <a href="https://docs.mapbox.com/">https://docs.mapbox.com/</a></li>
+            <li>Map Marker Icon- <a href="https://icons8.com/icons/set/map-marker">https://icons8.com/icons/set/map-marker</a></li>
+        </ul>
+
+        <h2 class="is-size-4 py-4">API</h2>
+        <ul>
+            <li>API home- <a href="https://openweathermap.org/">https://openweathermap.org/</a></li>
+            <li>API documentation- <a href="https://openweathermap.org/current">https://openweathermap.org/current</a></li>
+            <li>API city end point format- api.openweathermap.org/data/2.5/weather?q={city name}&appid={API key}</li>
+            <li>API zip code end point format- api.openweathermap.org/data/2.5/weather?zip={zip code},{country code}&appid={API key}</li>
+            <li>API key is required</li>
+        
+        </ul>
+        <h2 class="is-size-4 py-4">Noteworthy</h2>
+        <ul>
+            <li>I used Bulma, web components, await fetch in JavaScript, and an API</li>
+            <li>My application is mobile friendly and adapts to various screen sizes</li>
+            <li>All JS code is housed in seperate ES6 modularized files </li>
+            <li>Random weather fact is displayed when page loads</li>
+            <li>Carousel used to show images on About page</li>
+            <li>Does not allow user to favorite invalid searches</li>
+
+        </ul>
+        <h2 class="is-size-4 py-4">Grading</h2>
+        <ul>
+            <li>Ajax via fetch() is used ln the App Page</li>
+            <li>Local storage is used on the App and Favorites page</li>
+            <li>An embedded font is utilized throughout the application</li>
+            <li>App page has all required controls</li>
+            <li>Local Storage is used to store favorited locations in a list and has a clear button</li>
+            <li>Required information is on the About and Documentation page</li>
+            <li>Global navigationn and indicators are used</li>
+            <li>Error handling has been improved</li>
+            <li>Images are optimized</li>
+            <li>ES6 Module pattern used </li>
+            <li>Used MapBox to visualize the locations that are searched for </li>
+            <li>Map controls for the user are available</li>
+        </ul>
+        <h2 class="is-size-4 py-4">To Do</h2>
+        <ul>
+            <li>Work on performance of the favorites page</li>
+            <li>Impliment another API that searches for images matching the location or weather of a search</li>
+        </ul>
+    </div>
+
+
+
+<ww-contact></ww-contact>
+<ww-footer></ww-footer>
+
+
+</body>
+</html>
