@@ -1,0 +1,37 @@
+@font-face {
+    font-family: "Plastic Love Regular";
+    src: url(../fonts/PlasticLoveRegular-MVO9v.woff);
+  }
+body{
+    font-family: tahoma, verdana, "sans serif";
+}
+    
+button{
+    font-size:1.2em;
+}
+
+canvas {
+    background: #ffffff;
+    position:absolute;
+    z-index: 0;
+    cursor: pointer;
+    border: 2px solid black;
+ }
+ 
+ #topCanvas{
+     background: rgba(0,0,0,0);
+     position:absolute;
+     z-index: 1;
+     cursor: pointer;
+     border: 2px solid black;
+ }
+     
+ #controls {
+    position: absolute;
+    z-index: 2;
+ }
+ h1,h2,nav{
+     font-family: "Plastic Love Regular";
+ }
+
+ 

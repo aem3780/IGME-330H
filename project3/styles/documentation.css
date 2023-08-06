@@ -1,0 +1,7 @@
+@font-face {
+    font-family: "Plastic Love Regular";
+    src: url(../fonts/PlasticLoveRegular-MVO9v.woff);
+  }
+  h1,nav{
+    font-family: "Plastic Love Regular";
+}

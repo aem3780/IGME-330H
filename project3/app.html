@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<title>Project 3</title>
+    <script src="src/main.js" type="module"></script>
+	<link rel="PlasticLoveRegular" href="fonts/PlasticLoveRegular-MVO9v.woff">
+    <link rel="stylesheet" href="styles/app.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+
+</head>
+
+<body>
+
+    <navigation-bar></navigation-bar>
+
+    <div class="section pt-2 pb-2 has-background-danger">
+        <nav class="breadcrumb has-arrow-separator ">
+            <ul class="is-size-7">
+                <li><a class="has-text-white is-size-6" href="about.html">about</a></li>
+                <li class="is-active"><a class="has-text-white is-size-6">app</a></li>
+            </ul>
+        </nav>
+    </div>
+
+	<div class="columns is-centered ml-6">
+
+	<div class="column is-offset-1 is-half mt-6 ml-6">
+		<h1 class="is-size-3 has-text-danger pt-2 pb-4 pl-6 ml-6 pr-auto">SPECTACULAR SENSATIONAL SANDBOX</h1>
+		<canvas width="800" height="480" class="mb-6"></canvas>
+		<canvas id="topCanvas" width="800" height="480" class="mb-6"></canvas>
+	</div>
+
+
+	<div class="column is-one-fourth is-offset-1 mt-6">
+		<p class="has-text-danger pb-2 ml-6">Use your mouse to draw shapes. <br>
+			Experiment by applying filters to <br> shapes, changing colors, sizes and tools.</p>
+			<br>
+		<div id="controls" class="ml-6">
+		<section>
+			<h2 class="is-size-4 has-text-danger">SANDBOX CONTROLS:</h2>
+		</section>
+	
+	
+		  <section class="pb-2">
+			  <h3 class="is-size-5">Tool:</h3>
+			  <span>
+				  <select id="toolChooser" class="has-text-danger">
+					<option value="toolPencil">Pencil</option>
+					<option value="toolRectangle">Rectangle</option>
+					<option value="toolLine">Line</option>
+					<option value="toolCircle">Circle</option>
+					<option value="toolTriangle">Triangle</option>
+				</select>
+			  </span>
+		  </section>
+	
+		  <section class="pb-2">
+			  <h3 class="is-size-5">Circle Size:</h3>
+			<span>
+				<select id="radiusChooser" class="has-text-danger">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3" selected>3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+				</select>
+			</span>
+		</section>
+	
+		<section class="pb-2">
+			<h3 class="is-size-5">Line Width:</h3>
+			<span>
+				<select id="lineWidthChooser" class="has-text-danger">
+					<option value="1">1</option>
+					<option value="2">2</option>
+					<option value="3" selected>3</option>
+					<option value="4">4</option>
+					<option value="5">5</option>
+					<option value="6">6</option>
+					<option value="7">7</option>
+					<option value="8">8</option>
+					<option value="9">9</option>
+					<option value="10">10</option>
+				</select>
+			</span>
+		</section>
+	
+	
+		<section class="pb-2">
+			<h3 class="is-size-5">Stroke Color:</h3>
+			<span>
+				<select id="strokeStyleChooser" class="has-text-danger">
+					<option value="red" selected>Red</option>
+					<option value="orange">Orange</option>
+					<option value="purple" >Purple</option>
+					<option value="green">Green</option>
+					<option value="blue">Blue</option>
+					<option value="magenta">Magenta</option>
+					<option value="yellow">Yellow</option>
+					<option value="white">White</option>
+					<option value="pink">Pink</option>
+					<option value="black">Black</option>
+					<option value="violet">Violet</option>
+					<option value="turquoise">Turquoise</option>
+					<option value="silver">Silver</option>
+					<option value="sienna">Brown</option>
+					<option value="PowderBlue">Light Blue</option>
+					<option value="paleGreen">Light Green</option>
+					<option value="khaki">Light Yellow</option>
+				</select>
+			</span>
+		</section>
+	
+		<section class="pb-2">
+			<h3 class="is-size-5">Fill Color: </h3>
+			<span>
+				<select id="fillStyleChooser" class="has-text-danger">
+					<option value="red" selected>Red</option>
+					<option value="orange">Orange</option>
+					<option value="purple" >Purple</option>
+					<option value="green">Green</option>
+					<option value="blue">Blue</option>
+					<option value="magenta">Magenta</option>
+					<option value="yellow">Yellow</option>
+					<option value="white">White</option>
+					<option value="pink">Pink</option>
+					<option value="black">Black</option>
+					<option value="violet">Violet</option>
+					<option value="turquoise">Turquoise</option>
+					<option value="silver">Silver</option>
+					<option value="sienna">Brown</option>
+					<option value="PowderBlue">Light Blue</option>
+					<option value="paleGreen">Light Green</option>
+					<option value="khaki">Light Yellow</option>
+	
+				</select>
+			</span>
+		</section>
+	
+		<section class="pb-2">
+			<h3 class="is-size-5">Background Color: </h3>
+			<span>
+				<select id="backgroundColor" class="has-text-danger">
+					<option value="red">Red</option>
+					<option value="orange">Orange</option>
+					<option value="purple" >Purple</option>
+					<option value="green">Green</option>
+					<option value="blue">Blue</option>
+					<option value="magenta">Magenta</option>
+					<option value="yellow">Yellow</option>
+					<option value="white" selected>White</option>
+					<option value="pink">Pink</option>
+					<option value="black">Black</option>
+					<option value="violet">Violet</option>
+					<option value="turquoise">Turquoise</option>
+					<option value="silver">Silver</option>
+					<option value="sienna">Brown</option>
+					<option value="PowderBlue">Light Blue</option>
+					<option value="paleGreen">Light Green</option>
+					<option value="khaki">Light Yellow</option>
+				</select>
+			</span>
+		</section>
+	
+		<section class="pb-2">
+			<h3 class="is-size-5">Apply Filters:</h3>
+				  <span>
+					<input type="checkbox" id="noiseCB" >
+					<label for="noiseCB"> Show Noise</label>
+					  <input type="checkbox" id="invertCB" >
+					<label for="invertCB"> Invert Colors</label>
+					  <input type="checkbox" id="pastelCB" >
+					<label for="pastelCB"> Pastel Colors</label>
+				</span>
+		</section>
+	
+		<section class="pb-2">
+			<h3 class="is-size-5">Randomly Drawn Shapes:</h3>
+		</section>
+		
+		<section>
+			<button id="btnPlay" class="button is-danger mr-1 mt-1 mb-1">Play</button>
+			<button id="btnPause" class="button is-danger mr-1 mt-1 mb-1">Pause</button>
+			<button id="btnClear" class="button is-danger mr-1 mt-1 mb-1">Clear Canvas</button>
+		</section>
+	
+		  <section class="mb-6 pb-6">
+			<span>
+			  <input type="checkbox" id="cbRectangles" checked>
+			  <label for="cbRectangles">Rectangles</label>
+			  <input type="checkbox" id="cbCircles" checked>
+			  <label for="cbCircles">Circles</label>
+			  <input type="checkbox" id="cbLines" checked>
+			  <label for="cbLines">Lines</label>
+			  <input type="checkbox" id="cbTriangles" checked>
+			  <label for="cbTriangles">Triangles</label>
+			</span>
+		  </section>
+		</div>
+
+	</div>
+
+
+
+
+
+	</div>
+
+
+	  
+</body>
+
+
+</html>
