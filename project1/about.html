@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/app.css">
+    <script src="src/about.js" type="module"></script>
+    <script src="src/carousel.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/js/bulma-carousel.min.js"></script>
+    <link rel="Cloudstorm-lJX0." href="fonts/Cloudstorm-lJX0.woff">
+    <link rel="Overpass-Regular" href="fonts/Overpass-Regular.woff">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma-carousel@4.0.3/dist/css/bulma-carousel.min.css">
+    <title>About</title>
+</head>
+<body>
+    <nav class="navbar is-primary">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="about.html">
+                <img src="images/weather.png" alt="cloud" style="max-height: 70px;" class="py-2 px-2">
+                Weather Watch</a>
+            <a class="navbar-burger mt-4" id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+        </div>
+    
+        <div class="navbar-menu" id=nav-links>
+            <div class="navbar-end">
+                <a class="navbar-item" href="about.html">About</a>
+                <a class="navbar-item" href="app.html">App</a>
+                <a class="navbar-item" href="favorites.html">Favorites</a>
+                <a class="navbar-item" href="sources.html">Documentation</a>
+            </div>
+    
+        </div>
+    </nav>
+    
+    <div class="section pt-2 pb-2">
+        <nav class="breadcrumb has-arrow-separator">
+            <ul class="is-size-7">
+                <li class="is-active"><a>About</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="section container">
+        <h1 class="is-size-3 has-text-centered has-text-primary py-2">About Weather Watch</h1>
+        <p class="mx-6 px-4 py-2 mb-2">Weather Watch is a web application that utilizes the Current Weather API from 
+            OpenWeatherMap. Users are able to search for the current weather of a location by selecting from a list of cities in the US, searching by zip code, 
+            or selecting from a list of international cities. Feel free to save your favorite locations to the favorites page for easier
+            access to your favorite locations' weather conditions. This application uses Bulma, JavaScript, HTML, CSS and also local storage. 
+            Local storage allows the users search terms and saved locations to be available upon reopening of the app. Have fun!
+        </p>
+    </div>
+
+    <section class="section">
+        <div class="container">
+            <!-- Start Carousel -->
+            <div id="carousel-demo" class="carousel">
+                <div class="item-1">
+                    <img src="images/cloudy.jpg" alt="cloudy">
+                </div>
+                <div class="item-2">
+                    <!-- Slide Content -->
+                    <img src="images/foggy.jpg" alt="snowfog">
+                </div>
+                <div class="item-3">
+                    <!-- Slide Content -->
+                    <img src="images/snow.jpg" alt="snow">
+                </div>
+                <div class="item-4">
+                    <!-- Slide Content -->
+                    <img src="images/sunny.jpg" alt="sunny">
+                </div>
+                <div class="item-5">
+                    <!-- Slide Content -->
+                    <img src="images/rain.jpg" alt="rain">
+                </div>
+                <div class="item-6">
+                    <!-- Slide Content -->
+                    <img src="images/lightening.jpg" alt="storm">
+                </div>
+                <div class="item-7">
+                    <!-- Slide Content -->
+                    <img src="images/tornado.jpg" alt="tornado">
+                </div>
+                <div class="item-8">
+                    <!-- Slide Content -->
+                    <img src="images/snowing.jpg" alt="snowing">
+                </div>
+            </div>
+            <!-- End Carousel -->
+        </div>
+    </section>
+
+</body>
+
+    <ww-footer></ww-footer>
+
+</html>

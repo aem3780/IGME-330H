@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/app.css">
+    <script src="src/favorites.js" type="module"></script>
+    <link rel="Cloudstorm-lJX0." href="fonts/Cloudstorm-lJX0.woff">
+    <link rel="Overpass-Regular" href="fonts/Overpass-Regular.woff">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <title>Favorites</title>
+</head>
+<body>
+    <nav class="navbar is-primary">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="about.html">
+                <img src="images/weather.png" alt="cloud" style="max-height: 70px;" class="py-2 px-2">
+                Weather Watch</a>
+            <a class="navbar-burger mt-4" id="burger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+        </div>
+    
+        <div class="navbar-menu" id=nav-links>
+            <div class="navbar-end">
+                <a class="navbar-item" href="about.html">About</a>
+                <a class="navbar-item" href="app.html">App</a>
+                <a class="navbar-item" href="favorites.html">Favorites</a>
+                <a class="navbar-item" href="sources.html">Documentation</a>
+            </div>
+    
+        </div>
+    </nav>
+    
+    <div class="section pt-2 pb-2">
+        <nav class="breadcrumb has-arrow-separator">
+            <ul class="is-size-7">
+                <li><a class="has-text-primary-dark" href="about.html">About</a></li>
+                <li class="is-active"><a>Favorites</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <h1 class="is-size-3 has-text-centered has-text-primary has-background-primary-light py-2">Favorite  Locations</h1>
+        <div class="is-italic has-text-centered" id="status">
+            <p class="is-italic has-text-centered">See the current weather of your saved locations!</p>
+        </div>
+
+    <section class="section container">
+        <p class="is-size-5 is-subtitle py-2 mx-3">Select a Favorite City From List:</p>
+        <select class="mx-3 mt-2" id="location-select">
+        </select>
+
+        <button id="search-city" class="button is-warning">Search</button>
+        <button id="clear" class="button is-warning">Clear Favorites</button>
+        <div class="card-list mx-5 mt-5"></div>
+    </section>  
+
+</body>
+
+    <ww-footer ></ww-footer>
+
+</html>
