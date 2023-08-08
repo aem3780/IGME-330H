@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<title>XHR - Load Text</title>
+	<style>
+	body{
+	  font-family: sans-serif;
+	}
+	</style>
+
+</head>
+<body>
+	<h2>XML - Load JSON File</h2>
+	<p>The <code>pet-names.json</code> file contains popular dog, cat and bird pet names, separated by commas.</p>
+	<p>Note that because XHR is loading a local file, this and the other examples will have to be run off a web server rather than from your computer's hard drive (e.g. banjo.rit.edu or VSCode's liveserver etc)</p>
+	
+	<hr>
+	<button id="my-button">Load Data</button>
+	<div id="output">Click button to load</div>
+	
+
+<script>
+
+        document.querySelector("#my-button").onclick = loadTextXHR;
+      function loadTextXHR() {
+        const url = "data/pet-names.json";
+        fetch(url)
+          .then((response) => {
+            if (response.ok) {
+              return response.json();
+            }
+
+            return response.text().then((text) => {
+              throw text;
+            });
+          })
+          .then((json) => {
+            let keys = Object.keys(json);
+            let html = "";
+            for (let k of keys) {
+              const obj = json[k];
+              html += `<h3>${obj.title}</h3>`;
+              html += `<ol>${obj["namelist"].map((w) => `<li>${w}</li>`).join("")}</ol>`;
+            }
+
+            document.querySelector("#output").innerHTML = html;
+          })
+          .catch((error) => {
+            console.log(error);
+          });
+    
+ 
+    }
+</script>
+</body>
+</html>
